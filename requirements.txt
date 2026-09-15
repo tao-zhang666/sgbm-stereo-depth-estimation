@@ -1,0 +1,19 @@
+# 本项目专用环境（虚拟环境，位于项目根目录的 .venv）
+#
+# 用途：把版本钉住，保证换电脑/换人也能跑出一模一样的结果。
+# 安装：
+#     python -m venv .venv
+#     .venv\Scripts\activate
+#     python -m pip install -r requirements.txt
+#
+# 实测环境：Windows / Python 3.12.10，以下版本均已实际跑通本项目全部脚本
+# （阶段一参数选择、阶段二独立评测、阶段三视差转深度）。
+
+opencv-contrib-python==5.0.0.93   # 当前脚本只用 Stereo SGBM；装 contrib 版是为了后续可能使用的 WLS（cv2.ximgproc），目前未使用
+numpy==2.5.3
+matplotlib==3.11.2                # 画参数曲线、四联图、误差图等所有图
+pillow==12.3.0                    # matplotlib 的依赖（图像读写），随它一起安装；本项目脚本未直接使用
+
+# 可选：读取 configs/sgbm.yaml 时优先用 pyyaml；
+# 没装也没关系，脚本会自动改用内置的极简解析（只支持本配置文件用到的子集）。
+# pyyaml==6.0.1

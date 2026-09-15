@@ -1,0 +1,31 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python and test caches
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+**/.mplcache/
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# KITTI data is downloaded separately
+/data_scene_flow/
+/data_scene_flow_calib/
+/data_scene_flow.zip
+/data_scene_flow_calib.zip
+
+# 数据划分本身不提交，但保留划分清单（用于核对选了哪 50 个场景）
+/data_split/*
+!/data_split/scene_split.csv
+
+# 运行产生的二进制数组（重新运行即可生成）
+*.npy
+

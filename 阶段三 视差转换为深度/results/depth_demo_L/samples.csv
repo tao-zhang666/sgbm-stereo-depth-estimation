@@ -1,0 +1,2 @@
+﻿x,y,disparity,depth_m,m_per_px,gt_disparity,gt_depth_m,disp_err_px,depth_err_m
+300,330,48.6875,7.8949,0.1622,48.4727,7.9299,0.2148,-0.0350
